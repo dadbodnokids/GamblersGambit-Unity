@@ -6,11 +6,15 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //Game Buttons
+    // Game Buttons
     public Button dealBtn;
     public Button hitBtn;
     public Button standBtn;
     public Button betBtn;
+
+    // Access the player and dealer's script
+    public PlayerScript playerScript;
+    public PlayerScript dealerScript;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +23,13 @@ public class GameManager : MonoBehaviour
         dealBtn.onClick.AddListener(() => DealClicked());
         hitBtn.onClick.AddListener(() => HitClicked());
         standBtn.onClick.AddListener(() => StandClicked());
-
     }
 
     private void DealClicked()
     {
-        throw new NotImplementedException();
+        GameObject.Find("Deck").GetComponent<DeckScript>().Shuffle();
+        playerScript.StartHand();
+        dealerScript.StartHand();
     }
 
     private void HitClicked()
