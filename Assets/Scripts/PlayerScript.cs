@@ -50,4 +50,33 @@ public class PlayerScript : MonoBehaviour
         return handValue;
     }
 
+    public void AceCheck()
+    {
+        foreach(CardScript ace in aceList)
+        {
+            if(handValue + 10 < 22 && ace.GetValueOfCard() == 1)
+            {
+                // if converting, adjust card object value and hand
+                ace.SetValue(11);
+                handValue += 10;
+            } else if (handValue > 21 && ace.GetValueOfCard() == 1)
+            {
+                // if converting, adjust gameobject value and hand value
+                ace.SetValue(1);
+                handValue -= 10;
+            }
+        }
+    }
+
+    // Add or subtract from money, for bets
+    public void AdjustMoney(int amount)
+    {
+        money += amount;
+    }
+
+    // Output player's current money amount
+    public int GetMoney()
+    {
+        return money;
+    }
 }
