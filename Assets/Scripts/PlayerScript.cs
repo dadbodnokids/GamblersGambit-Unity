@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     // --- This script is for BOTH player and dealer
-    // This keeps track of all cards, using an array
 
     // Get other scripts
     public CardScript cardScript;
@@ -34,7 +33,7 @@ public class PlayerScript : MonoBehaviour
     public int GetCard()
     {
         // Get a card, use deal card to assign sprite and value to card on table
-        int cardValue = deckScript.DealCard(hand[cardIndex].GetComponent <CardScript>());
+        int cardValue = deckScript.DealCard(hand[cardIndex].GetComponent<CardScript>());
         // Show card on game screen
         hand[cardIndex].GetComponent<Renderer>().enabled = true;
         // Add card value to running total of the hand
@@ -45,21 +44,23 @@ public class PlayerScript : MonoBehaviour
             aceList.Add(hand[cardIndex].GetComponent<CardScript>());
         }
         // Check if we should use an 11 instead of a 1
-        //AceCheck();
+        AceCheck();
         cardIndex++;
         return handValue;
     }
 
+    // Search for needed ace conversions, 1 to 11 or vice versa
     public void AceCheck()
     {
-        foreach(CardScript ace in aceList)
+        // for each ace in the lsit check
+        foreach (CardScript ace in aceList)
         {
             if(handValue + 10 < 22 && ace.GetValueOfCard() == 1)
             {
                 // if converting, adjust card object value and hand
                 ace.SetValue(11);
                 handValue += 10;
-            } else if (handValue > 21 && ace.GetValueOfCard() == 1)
+            } else if (handValue > 21 && ace.GetValueOfCard() == 11)
             {
                 // if converting, adjust gameobject value and hand value
                 ace.SetValue(1);
@@ -79,4 +80,18 @@ public class PlayerScript : MonoBehaviour
     {
         return money;
     }
+
+    // Hides all cards, resets the needed variables
+    public void ResetHand()
+    {
+        for(int i = 0; i < hand.Length; i++)
+        {
+            hand[i].GetComponent<CardScript>().ResetCard();
+            hand[i].GetComponent<Renderer>().enabled = false;
+        }
+        cardIndex = 0;
+        handValue = 0;
+        aceList = new List<CardScript>();
+    }
+
 }

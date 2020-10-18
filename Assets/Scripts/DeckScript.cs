@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 
 public class DeckScript : MonoBehaviour
@@ -8,7 +9,6 @@ public class DeckScript : MonoBehaviour
     int[] cardValues = new int[53];
     int currentIndex = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         GetCardValues();
@@ -17,7 +17,7 @@ public class DeckScript : MonoBehaviour
     void GetCardValues()
     {
         int num = 0;
-        // Loop to assign values to cards
+        // Loop to assign values to the cards
         for (int i = 0; i < cardSprites.Length; i++)
         {
             num = i;
@@ -31,7 +31,6 @@ public class DeckScript : MonoBehaviour
             }
             cardValues[i] = num++;
         }
-        currentIndex = 1;
     }
 
     public void Shuffle()
@@ -47,7 +46,8 @@ public class DeckScript : MonoBehaviour
             int value = cardValues[i];
             cardValues[i] = cardValues[j];
             cardValues[j] = value;
-        }        
+        }
+        currentIndex = 1;
     }
 
     public int DealCard(CardScript cardScript)
