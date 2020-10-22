@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public Button hitBtn;
     public Button standBtn;
     public Button betBtn;
+    public Button leaveBtn;
 
     private int standClicks = 0;
 
@@ -29,8 +31,12 @@ public class GameManager : MonoBehaviour
 
     // Card hiding dealer's 2nd card
     public GameObject hideCard;
+
     // How much is bet
     int pot = 0;
+
+    // How many rounds played
+    int round = 0;
 
     void Start()
     {
@@ -39,11 +45,15 @@ public class GameManager : MonoBehaviour
         hitBtn.onClick.AddListener(() => HitClicked());
         standBtn.onClick.AddListener(() => StandClicked());
         betBtn.onClick.AddListener(() => BetClicked());
+        leaveBtn.onClick.AddListener(() => LeaveClicked());
     }
+
+    
 
     private void DealClicked()
     {
-        // Reset round, hide text, prep for new hand
+        // Reset round, hide text, prep for new hand. Add 1 to round counter.
+        round += 1;
         playerScript.ResetHand();
         dealerScript.ResetHand();
         // Hide deal hand score at start of deal
@@ -63,6 +73,7 @@ public class GameManager : MonoBehaviour
         hitBtn.gameObject.SetActive(true);
         standBtn.gameObject.SetActive(true);
         standBtnText.text = "Stand";
+        leaveBtn.gameObject.SetActive(true);
         // Set standard pot size
         pot = 40;
         betsText.text = "Bets: $" + pot.ToString();
@@ -88,6 +99,11 @@ public class GameManager : MonoBehaviour
         if (standClicks > 1) RoundOver();
         HitDealer();
         standBtnText.text = "Call";
+    }
+
+    private void LeaveClicked()
+    {
+        SceneManager.LoadScene("EndScene");
     }
 
     private void HitDealer()
@@ -145,6 +161,7 @@ public class GameManager : MonoBehaviour
             standBtn.gameObject.SetActive(false);
             dealBtn.gameObject.SetActive(true);
             mainText.gameObject.SetActive(true);
+            leaveBtn.gameObject.SetActive(true);
             dealerScoreText.gameObject.SetActive(true);
             hideCard.GetComponent<Renderer>().enabled = false;
             cashText.text = "$" + playerScript.GetMoney().ToString();
