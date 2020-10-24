@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         hitBtn.onClick.AddListener(() => HitClicked());
         standBtn.onClick.AddListener(() => StandClicked());
         betBtn.onClick.AddListener(() => BetClicked());
-        leaveBtn.onClick.AddListener(() => LeaveClicked());
+        // leaveBtn.onClick.AddListener(() => LeaveClicked());
     }
 
     
@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
         round += 1;
         playerScript.ResetHand();
         dealerScript.ResetHand();
+
         // Hide deal hand score at start of deal
         dealerScoreText.gameObject.SetActive(false);
         mainText.gameObject.SetActive(false);
@@ -63,17 +64,22 @@ public class GameManager : MonoBehaviour
         GameObject.Find("Deck").GetComponent<DeckScript>().Shuffle();
         playerScript.StartHand();
         dealerScript.StartHand();
+
         // Update the score displayed
         scoreText.text = "Hand: " + playerScript.handValue.ToString();
         dealerScoreText.text = "Hand: " + dealerScript.handValue.ToString();
+
         // Enable to hide one of the dealer's cards
         hideCard.GetComponent<Renderer>().enabled = true;
+
         // Adjust buttons visibility
         dealBtn.gameObject.SetActive(false);
         hitBtn.gameObject.SetActive(true);
         standBtn.gameObject.SetActive(true);
+        betBtn.gameObject.SetActive(true);
         standBtnText.text = "Stand";
-        leaveBtn.gameObject.SetActive(true);
+        // leaveBtn.gameObject.SetActive(false);
+
         // Set standard pot size
         pot = 40;
         betsText.text = "Bets: $" + pot.ToString();
@@ -99,6 +105,7 @@ public class GameManager : MonoBehaviour
         if (standClicks > 1) RoundOver();
         HitDealer();
         standBtnText.text = "Call";
+        hitBtn.gameObject.SetActive(false);
     }
 
     private void LeaveClicked()
@@ -124,9 +131,11 @@ public class GameManager : MonoBehaviour
         bool dealerBust = dealerScript.handValue > 21;
         bool player21 = playerScript.handValue == 21;
         bool dealer21 = dealerScript.handValue == 21;
+
         // If stand has been clicked less than twice, no 21s or busts, quit function
         if (standClicks < 2 && !playerBust && !dealerBust && !player21 && !dealer21) return;
         bool roundOver = true;
+
         // All bust, bets returned
         if (playerBust && dealerBust)
         {
@@ -161,11 +170,18 @@ public class GameManager : MonoBehaviour
             standBtn.gameObject.SetActive(false);
             dealBtn.gameObject.SetActive(true);
             mainText.gameObject.SetActive(true);
-            leaveBtn.gameObject.SetActive(true);
+            betBtn.gameObject.SetActive(false);
+            // leaveBtn.gameObject.SetActive(true);
             dealerScoreText.gameObject.SetActive(true);
             hideCard.GetComponent<Renderer>().enabled = false;
             cashText.text = "$" + playerScript.GetMoney().ToString();
             standClicks = 0;
+            // Activate "Leave Table button after round 3"
+            if (round >= 3)
+            {
+                leaveBtn.gameObject.SetActive(true);
+            }
+            print("End of Round: " + round);
         }
     }
 
@@ -174,9 +190,13 @@ public class GameManager : MonoBehaviour
     {
         Text newBet = betBtn.GetComponentInChildren(typeof(Text)) as Text;
         int intBet = int.Parse(newBet.text.ToString().Remove(0, 1));
-        playerScript.AdjustMoney(-intBet);
-        cashText.text = "$" + playerScript.GetMoney().ToString();
-        pot += (intBet * 2);
-        betsText.text = "Bets: $" + pot.ToString();
+        if (playerScript.money >= 20)
+        {
+            playerScript.AdjustMoney(-intBet);
+            cashText.text = "$" + playerScript.GetMoney().ToString();
+            pot += (intBet * 2);
+            betsText.text = "Bets: $" + pot.ToString();
+        }
     }
+
 }

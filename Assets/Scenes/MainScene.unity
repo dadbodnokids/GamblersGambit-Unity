@@ -272,6 +272,7 @@ MonoBehaviour:
   cardScript: {fileID: 1446282198}
   deckScript: {fileID: 2033168925}
   handValue: 0
+  money: 1000
   hand:
   - {fileID: 1446282195}
   - {fileID: 747091058}
@@ -302,7 +303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &303002839
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2262,7 +2263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1418665012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2937,7 +2938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1674980092
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3106,7 +3107,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
-    m_LineSpacing: 1
+    m_LineSpacing: 0.75
   m_Text: 'Leave
 
     Table'
@@ -3419,7 +3420,7 @@ MonoBehaviour:
   hitBtn: {fileID: 1418665013}
   standBtn: {fileID: 1674980093}
   betBtn: {fileID: 303002840}
-  leaveBtn: {fileID: 0}
+  leaveBtn: {fileID: 2088751843}
   playerScript: {fileID: 236879995}
   dealerScript: {fileID: 2096658068}
   scoreText: {fileID: 1301266355}
@@ -3990,7 +3991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2088751842
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4170,6 +4171,7 @@ MonoBehaviour:
   cardScript: {fileID: 1446282198}
   deckScript: {fileID: 2033168925}
   handValue: 0
+  money: 1000
   hand:
   - {fileID: 611244535}
   - {fileID: 1577001989}
