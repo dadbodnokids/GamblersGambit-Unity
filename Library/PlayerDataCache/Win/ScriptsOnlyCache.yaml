@@ -58,23 +58,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 12518}
+      Script: {instanceID: 12556}
     - Class: 114
-      Script: {instanceID: 13102}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 13640}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 14206}
+      Script: {instanceID: 14242}
     - Class: 114
-      Script: {instanceID: 14254}
+      Script: {instanceID: 14290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -117,31 +117,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 12518}
+      Script: {instanceID: 12556}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12948}
     - Class: 114
-      Script: {instanceID: 13102}
-    - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 13140}
     - Class: 114
       Script: {instanceID: 13640}
     - Class: 114
-      Script: {instanceID: 14032}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 14184}
+      Script: {instanceID: 14068}
     - Class: 114
-      Script: {instanceID: 14206}
+      Script: {instanceID: 14220}
     - Class: 114
-      Script: {instanceID: 14254}
+      Script: {instanceID: 14242}
+    - Class: 114
+      Script: {instanceID: 14290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -186,19 +186,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11174}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11500}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12214}
     - Class: 114
-      Script: {instanceID: 13102}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 13640}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 14254}
+      Script: {instanceID: 14290}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -743,4 +743,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/1-Menu.unity
   - Assets/Scenes/2-Blackjack.unity
   - Assets/Scenes/3-EndScene.unity
-  playerPath: D:/University/Fall2020/Alt Game Dev/Team4_Bet1_build/GamblersGambitGame.exe
+  playerPath: C:/Users/Tanner/Desktop/TestBuilds/GamblersGambitGame.exe

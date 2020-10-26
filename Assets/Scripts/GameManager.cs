@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
         hitBtn.onClick.AddListener(() => HitClicked());
         standBtn.onClick.AddListener(() => StandClicked());
         betBtn.onClick.AddListener(() => BetClicked());
-        // leaveBtn.onClick.AddListener(() => LeaveClicked());
     }
 
     
@@ -78,7 +77,6 @@ public class GameManager : MonoBehaviour
         standBtn.gameObject.SetActive(true);
         betBtn.gameObject.SetActive(true);
         standBtnText.text = "Stand";
-        // leaveBtn.gameObject.SetActive(false);
 
         // Set standard pot size
         pot = 40;
@@ -171,7 +169,6 @@ public class GameManager : MonoBehaviour
             dealBtn.gameObject.SetActive(true);
             mainText.gameObject.SetActive(true);
             betBtn.gameObject.SetActive(false);
-            // leaveBtn.gameObject.SetActive(true);
             dealerScoreText.gameObject.SetActive(true);
             hideCard.GetComponent<Renderer>().enabled = false;
             cashText.text = "$" + playerScript.GetMoney().ToString();
@@ -180,6 +177,11 @@ public class GameManager : MonoBehaviour
             if (round >= 3)
             {
                 leaveBtn.gameObject.SetActive(true);
+            }
+            if (playerScript.GetMoney() <= 0)
+            {
+                dealBtn.gameObject.SetActive(false);
+                SceneManager.LoadScene(2);                
             }
             print("End of Round: " + round);
         }
