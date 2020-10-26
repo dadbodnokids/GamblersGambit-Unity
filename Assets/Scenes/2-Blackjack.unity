@@ -328,7 +328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -657.25, y: -406}
+  m_AnchoredPosition: {x: -621, y: -406}
   m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &303002840
@@ -840,7 +840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &550099167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -931,8 +931,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669.16, y: 226}
-  m_SizeDelta: {x: 436.54, y: 80}
+  m_AnchoredPosition: {x: -567, y: -504}
+  m_SizeDelta: {x: 322.31418, y: 61.82779}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &587120356
 MonoBehaviour:
@@ -955,7 +955,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 85060e5228836774d9c43723daf4bd9f, type: 3}
-    m_FontSize: 80
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
@@ -1975,7 +1975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669.16, y: 416.8}
+  m_AnchoredPosition: {x: -866, y: -506}
   m_SizeDelta: {x: 436.54, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1101167446
@@ -1999,10 +1999,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 85060e5228836774d9c43723daf4bd9f, type: 3}
-    m_FontSize: 80
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2383,7 +2383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -669.16, y: 322.4}
+  m_AnchoredPosition: {x: 8, y: -505}
   m_SizeDelta: {x: 436.54, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1301266355
@@ -2407,7 +2407,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 85060e5228836774d9c43723daf4bd9f, type: 3}
-    m_FontSize: 80
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
@@ -4513,6 +4513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardSprites:
+  - {fileID: 21300000, guid: 91f21a52d68e75f4aa3b0036c54f2e2b, type: 3}
   - {fileID: 21300000, guid: 5cd6bdf489a18604c817787d7fdaae2b, type: 3}
   - {fileID: 21300000, guid: ac805787882c29a4c9e22b1755d6cdc3, type: 3}
   - {fileID: 21300000, guid: a830a301e27bbac4db700658ba7121be, type: 3}

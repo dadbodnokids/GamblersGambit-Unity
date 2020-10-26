@@ -70,11 +70,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 13676}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 14242}
+      Script: {instanceID: 14244}
     - Class: 114
-      Script: {instanceID: 14290}
+      Script: {instanceID: 14292}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -131,17 +131,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 13640}
+      Script: {instanceID: 13642}
     - Class: 114
-      Script: {instanceID: 13676}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 14068}
+      Script: {instanceID: 14070}
     - Class: 114
-      Script: {instanceID: 14220}
+      Script: {instanceID: 14222}
     - Class: 114
-      Script: {instanceID: 14242}
+      Script: {instanceID: 14244}
     - Class: 114
-      Script: {instanceID: 14290}
+      Script: {instanceID: 14292}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -196,9 +196,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 13676}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 14290}
+      Script: {instanceID: 14292}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -743,4 +743,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/1-Menu.unity
   - Assets/Scenes/2-Blackjack.unity
   - Assets/Scenes/3-EndScene.unity
-  playerPath: C:/Users/Tanner/Desktop/TestBuilds/GamblersGambitGame.exe
+  playerPath: D:/University/Fall2020/Alt Game Dev/TeamTeam_Playtest_Build_v1/GamblersGambitGame.exe
