@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: LottoCard
+    uniqueID: 2745562857
+    locked: 0
   - name: CardBacks
     uniqueID: 1054360959
     locked: 0
