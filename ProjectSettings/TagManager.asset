@@ -44,6 +44,12 @@ TagManager:
   - name: LottoCard
     uniqueID: 2745562857
     locked: 0
+  - name: BackBox
+    uniqueID: 3463506827
+    locked: 0
+  - name: FrontBox
+    uniqueID: 147896297
+    locked: 0
   - name: CardBacks
     uniqueID: 1054360959
     locked: 0
