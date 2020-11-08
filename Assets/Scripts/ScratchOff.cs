@@ -23,7 +23,7 @@ public class ScratchOff : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0))
         {
-            Invoke("reveal", 10);
+            //Invoke("reveal", 10);
             isPressed = true;
         }
         else if(Input.GetMouseButtonUp(0))
