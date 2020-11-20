@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 67d87a71893442e48b6bd5c223174f6d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - scratchCamera: {fileID: 2617714197480604390, guid: ebfa14be8257a4842a71172cfdc73772,
+      type: 3}
+  - gasCamera: {fileID: 2266629198163637443, guid: 804d877f94f9a2f4c927214fc7661371,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

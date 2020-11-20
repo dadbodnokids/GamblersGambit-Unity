@@ -3,7 +3,15 @@ guid: a250017758eea48459261ab235013e81
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - scratcherCardPrefab: {instanceID: 0}
+  - curCard: {instanceID: 0}
+  - cardParent: {instanceID: 0}
+  - gasCamera: {instanceID: 0}
+  - scratchCamera: {instanceID: 0}
+  - continueButton: {instanceID: 0}
+  - cashLabel: {instanceID: 0}
+  - nextButton: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

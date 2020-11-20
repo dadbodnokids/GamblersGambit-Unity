@@ -7,18 +7,58 @@ public class ScratcherGameManager : MonoBehaviour
 {
     public int cash = 1000;
     public int scratcherCost = 10;
+    public int scratcherCount = 0;
+
+    public ScratcherCard.Symbol Cherry = ScratcherCard.Symbol.Cherry;
 
     public ScratcherCard scratcherCardPrefab;
     public ScratcherCard curCard;
     public RectTransform cardParent;
 
+    public Camera gasCamera;
+    public Camera scratchCamera;
+
+    public Button continueButton;
+
     private void Start() {
+        scratcherCount = 0;
+        scratcherCost = 10;
+        cash = 1000;
+        //gasCamera.enabled = true;
+        //scratchCamera.enabled = false;
         BuyNewScratcher();
     }
 
-    public void OnNextClicked() {
-        BuyNewScratcher();
+
+    public void OnSwapClicked()
+    {
+        scratchCamera.enabled = !scratchCamera.enabled;
+        gasCamera.enabled = !gasCamera.enabled;
     }
+
+    public void OnNextClicked() {
+        if (scratcherCount == 0)
+        {
+            scratcherCount += 1;
+            BuyNewScratcher();
+            //TODO: Make card a big win
+        }
+        else if (scratcherCount == 1)
+        {
+            scratcherCount += 1;
+            scratcherCost = 200;
+            BuyNewScratcher();
+            //TODO: Make Loss
+        }
+        else if (scratcherCount <10 && scratcherCount > 1)
+        {
+            scratcherCount += 1;
+            BuyNewScratcher();
+            //TODO: Make Losses
+        }
+    }
+
+    
 
     public void BuyNewScratcher() {
         cash -= scratcherCost;
@@ -28,6 +68,7 @@ public class ScratcherGameManager : MonoBehaviour
         }
 
         curCard = Instantiate(scratcherCardPrefab, cardParent);
+        //curCard.SetSymbols(ScratcherCard.Symbol.Cherry, ScratcherCard.Symbol.Cherry, ScratcherCard.Symbol.Cherry);
         curCard.OnAllSegmentsScratched.AddListener(OnScratcherAllSegmentsScratched);
 
         nextButton.interactable = false;
