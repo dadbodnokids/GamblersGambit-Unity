@@ -24,13 +24,6 @@ public class ScratcherCard : MonoBehaviour
 
     public UnityEvent OnAllSegmentsScratched;
 
-    // need an event when the scratching is complete
-
-    private void Start() {
-        SetRandomSymbols();
-        SetSymbolImages();
-    }
-
     public void SetSymbols(Symbol s1, Symbol s2, Symbol s3) {
         symbols[0] = s1;
         symbols[1] = s2;
@@ -38,11 +31,12 @@ public class ScratcherCard : MonoBehaviour
         SetSymbolImages();
     }
 
-    void SetRandomSymbols() {
-        for(int i = 0; i < symbols.Count; i++) {
+    public void SetRandomSymbols() {
+        for (int i = 0; i < symbols.Count; i++) {
             Symbol symbol = (Symbol)Random.Range(0, (int)Symbol.COUNT);
             symbols[i] = symbol;
         }
+        SetSymbolImages();
     }
 
     void SetSymbolImages() {

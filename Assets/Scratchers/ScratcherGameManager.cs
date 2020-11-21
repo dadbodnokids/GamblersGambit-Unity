@@ -24,9 +24,6 @@ public class ScratcherGameManager : MonoBehaviour
         scratcherCount = 0;
         scratcherCost = 10;
         cash = 1000;
-        //gasCamera.enabled = true;
-        //scratchCamera.enabled = false;
-        BuyNewScratcher();
     }
 
 
@@ -70,6 +67,8 @@ public class ScratcherGameManager : MonoBehaviour
         curCard = Instantiate(scratcherCardPrefab, cardParent);
         //curCard.SetSymbols(ScratcherCard.Symbol.Cherry, ScratcherCard.Symbol.Cherry, ScratcherCard.Symbol.Cherry);
         curCard.OnAllSegmentsScratched.AddListener(OnScratcherAllSegmentsScratched);
+
+        curCard.SetRandomSymbols();
 
         nextButton.interactable = false;
     }
