@@ -10,6 +10,8 @@ public class ScratcherGameManager : MonoBehaviour
     public int scratcherCount = 0;
 
     public ScratcherCard.Symbol Cherry = ScratcherCard.Symbol.Cherry;
+    public ScratcherCard.Symbol Orange = ScratcherCard.Symbol.Orange;
+    public ScratcherCard.Symbol Banana = ScratcherCard.Symbol.Banana;
 
     public ScratcherCard scratcherCardPrefab;
     public ScratcherCard curCard;
@@ -36,22 +38,101 @@ public class ScratcherGameManager : MonoBehaviour
     public void OnNextClicked() {
         if (scratcherCount == 0)
         {
+            scratcherCost = 5;
             scratcherCount += 1;
             BuyNewScratcher();
-            //TODO: Make card a big win
+            curCard.SetSymbols(Orange, Banana, Orange);
         }
         else if (scratcherCount == 1)
         {
+            scratcherCost = 10;
             scratcherCount += 1;
-            scratcherCost = 200;
             BuyNewScratcher();
-            //TODO: Make Loss
+            curCard.SetSymbols(Banana, Banana, Cherry);
         }
-        else if (scratcherCount <10 && scratcherCount > 1)
+        else if (scratcherCount == 2)
         {
+            scratcherCost = 0;
             scratcherCount += 1;
             BuyNewScratcher();
-            //TODO: Make Losses
+            curCard.SetSymbols(Cherry, Cherry, Cherry);
+        }
+        else if (scratcherCount == 3)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Orange, Banana, Cherry);
+        }
+        else if (scratcherCount == 4)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Banana, Orange, Cherry);
+        }
+        else if (scratcherCount == 5)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Cherry, Orange, Banana);
+        }
+        else if (scratcherCount == 6)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Cherry, Banana, Orange);
+        }
+        else if (scratcherCount == 7)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Orange, Cherry, Banana);
+        }
+        else if (scratcherCount == 8)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Orange, Banana, Cherry);
+        }
+        else if (scratcherCount == 9)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Banana, Orange, Cherry);
+        }
+        else if (scratcherCount == 10)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Cherry, Orange, Banana);
+        }
+        else if (scratcherCount == 11)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Orange, Cherry, Banana);
+        }
+        else if (scratcherCount == 12)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Banana, Cherry, Orange);
+        }
+        else if (scratcherCount == 13)
+        {
+            scratcherCost = 200;
+            scratcherCount += 1;
+            BuyNewScratcher();
+            curCard.SetSymbols(Cherry, Banana, Orange);
         }
     }
 
