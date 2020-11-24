@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1-Menu.unity
     guid: 3c9586d7f211aea4eb1fd56999d2adef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Blackjack.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/3-EndScene.unity
     guid: 6dbf4841efc48214abaecc5a997e0d5a
+  - enabled: 1
+    path: Assets/Scratchers/Scratchers.unity
+    guid: c65f0b45181969c4f909680d0f4ee5e1
   m_configObjects: {}
